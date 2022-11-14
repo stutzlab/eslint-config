@@ -13,6 +13,10 @@
         "eslint": ">= 8",
         "@typescript-eslint/eslint-plugin": "^5.40.0",
         "@shopify/eslint-plugin": "^42.0.1"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
     }
 }
 
