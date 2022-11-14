@@ -1,0 +1,18 @@
+{
+    "name": "@stutzlab/eslint-config",
+    "version": "0.0.1",
+    "description": "ESLint rules in 'Golang style'",
+    "main": "index.js",
+    "files": [
+      "index.js"
+    ],  
+    "dependencies": {
+        "@typescript-eslint/parser": "^5.40.0"
+    },
+    "peerDependencies": {
+        "eslint": ">= 3",
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@shopify/eslint-plugin": "^42.0.1"
+    }
+}
+
