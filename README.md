@@ -18,3 +18,16 @@ module.exports = {
   extends: '@stutzlab/eslint-config',
 };
 ```
+
+- If you are using prettier, this set of rules seems to work well along:
+
+.prettierrc.js
+```js
+module.exports = {
+  tabWidth: 2,
+  printWidth: 100,
+  trailingComma: 'all',
+  singleQuote: true,
+  bracketSpacing: true,
+};
+```
