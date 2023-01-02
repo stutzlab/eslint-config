@@ -7,11 +7,11 @@
         "index.js"
     ],
     "dependencies": {
-        "@typescript-eslint/parser": "^5.40.0"
+        "@typescript-eslint/parser": "^5.47.1"
     },
     "peerDependencies": {
-        "@shopify/eslint-plugin": "^42.0.1",
-        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@shopify/eslint-plugin": "^42.0.2",
+        "@typescript-eslint/eslint-plugin": "^5.47.1",
         "eslint": ">= 8"
     },
     "publishConfig": {
