@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     rules: {
-      'function-paren-newline': 0,
+      'function-paren-newline': 'off',
       'promise/prefer-await-to-then': 'error',
       'prefer-destructuring': ['error', { object: true, array: false }],
       'promise/prefer-await-to-callbacks': 'error',
