@@ -6,11 +6,13 @@ module.exports = {
   root: true,
   ignorePatterns: ['dist/**', 'build/**', 'coverage/**', 'node_modules/**'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'jest'],
   extends: [
     'plugin:@shopify/typescript-type-checking',
     'plugin:@shopify/esnext',
     'plugin:@shopify/node',
+    'prettier',
+    'plugin:prettier/recommended'
   ],
   settings: {
     // necessary to make import rules to find files
