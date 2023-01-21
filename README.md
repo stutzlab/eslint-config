@@ -40,7 +40,7 @@ This will recommend to developers the installation of eslint plugin which will s
 ```json
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll.eslint": true
   },
   "eslint.validate": [
     "javascript"
