@@ -19,15 +19,34 @@ module.exports = {
 };
 ```
 
-- If you are using prettier, this set of rules seems to work well along:
+- These rules will already embed basic prettier configurations and you won't need to add anything to your project for prettier, as it will run through eslint plugin.
 
-.prettierrc.js
-```js
-module.exports = {
-  tabWidth: 2,
-  printWidth: 100,
-  trailingComma: 'all',
-  singleQuote: true,
-  bracketSpacing: true,
-};
+### If using VSCode
+
+- Add to .vscode/extensions.json
+
+```json
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint"
+  ]
+}
 ```
+
+This will recommend to developers the installation of eslint plugin which will show errors and fix them in VSCode.
+
+- Add to .vscode/settings.json:
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ]
+}
+```
+
+This will fix errors when you save in VSCode editor.
+
