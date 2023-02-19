@@ -23,6 +23,8 @@ module.exports = {
     },
   },
   rules: {
+    'no-process-env': 'error',
+    'no-console': 'error',
     'promise/prefer-await-to-then': 'error',
     'prefer-destructuring': ['error', { object: true, array: false }],
     'promise/prefer-await-to-callbacks': 'error',
