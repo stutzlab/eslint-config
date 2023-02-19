@@ -49,4 +49,3 @@ This will recommend to developers the installation of eslint plugin which will s
 ```
 
 This will fix errors when you save in VSCode editor.
-
