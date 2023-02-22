@@ -34,28 +34,6 @@ module.exports = {
   },
   rules: {
 
-    // SPECIFIC RULES FOR THIS MONOREPO
-    'no-console': "error",
-    'no-process-env': "error",
-    
-    'no-restricted-imports': [
-      'error', {
-        paths:[ '@mortgage-loan/env' ]
-      }
-    ],
-    // remove this rule after upgrading Middy to the newer version 
-    // (this method setEnv was deprecated and probably removed from the newer versions)
-    'no-restricted-syntax': [
-      'error',
-      {
-        selector:
-          "CallExpression[callee.name='secretsManager'] > ObjectExpression > Property[key.name='setToEnv'][value.value=true]",
-        message:
-          'Setting secret manager environment variables is not allowed. Please use setToContext.',
-      },
-    ],  
-
-
 
     // CODE SMELLS
     // The developer must really understand what is going on and ignore
@@ -96,6 +74,14 @@ module.exports = {
     // If it's something that can be done later (technical deby), use "todo"
     'no-warning-comments': ['error', { terms: ['fixme'] }],
 
+    // Normally we should use a logging utility for this
+    'no-console': "error",
+
+    // Process env variables are global and should be used only on entry points of a program
+    'no-process-env': "error",
+
+
+    
     // Rarelly we would have these situations, so it needs explicit analysis
     'no-undefined': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
