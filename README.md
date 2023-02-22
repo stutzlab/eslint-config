@@ -19,6 +19,17 @@ module.exports = {
 };
 ```
 
+- Add these dev dependencies to package.json of your project (they are needed because of some specific requirements of the lib, so it can't be just inherited from the import for this lib)
+
+```json
+{
+  "@typescript-eslint/eslint-plugin: "^5.53.0",
+  "@typescript-eslint/parser": "^5.53.0",
+  "eslint": "^8.33.0",
+  "eslint-plugin-import": "^2.25.2"
+}
+```
+
 - These rules will already embed basic prettier configurations and you won't need to add anything to your project for prettier, as it will run through eslint plugin.
 
 ### If using VSCode

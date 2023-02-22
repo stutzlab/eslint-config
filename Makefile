@@ -1,5 +1,6 @@
 build:
 	yarn install
+	yarn esbuild src/index.js --bundle --platform=node --outfile=dist/index.js
 
 publish:
 	git config --global user.email "flaviostutz@gmail.com"
