@@ -2,3 +2,4 @@
     "private": true,
     "workspaces": ["lib", "example"]
 }
+
