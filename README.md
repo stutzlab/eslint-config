@@ -23,7 +23,7 @@ module.exports = {
 
 ```json
 {
-  "@typescript-eslint/eslint-plugin: "^5.53.0",
+  "@typescript-eslint/eslint-plugin": "^5.53.0",
   "@typescript-eslint/parser": "^5.53.0",
   "eslint": "^8.33.0",
   "eslint-plugin-import": "^2.25.2"
