@@ -14,3 +14,4 @@ jobs:
           node-version: '16.x'
           cache: yarn
       - run: make build
+      - run: make test

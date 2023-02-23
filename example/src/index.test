@@ -1,0 +1,4 @@
+const test = 123;
+
+// force an error here that will be fixed automatically later on
+export { test};

@@ -16,6 +16,7 @@ jobs:
           node-version: '16.x'
           cache: yarn
       - run: make build
+      - run: make test
       - run: make publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}

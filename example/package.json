@@ -1,0 +1,16 @@
+{
+    "name": "@stutzlab/eslint-config-test",
+    "version": "0.0.1",
+    "devDependencies": {
+        "@stutzlab/eslint-config": "*",
+        "@tsconfig/node14": "^1.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.53.0",
+        "@typescript-eslint/parser": "^5.53.0",
+        "esbuild": "^0.17.5",
+        "eslint": ">= 8",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-import": "^2.25.2",
+        "jest": "^29.4.3",
+        "typescript": "^4.9.5"
+    }
+}

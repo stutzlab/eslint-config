@@ -1,31 +1,4 @@
 {
-    "name": "@stutzlab/eslint-config",
-    "version": "0.0.1",
-    "description": "ESLint rules in 'Golang style'",
-    "main": "dist/index.js",
-    "files": [
-        "dist/index.js"
-    ],
-    "dependencies": {
-        "eslint-config-airbnb-base": "^15.0.0",
-        "eslint-config-airbnb-typescript": "^17.0.0",
-        "eslint-plugin-import": "^2.27.5",
-        "eslint-plugin-jest": "^27.2.1",
-        "eslint-plugin-prettier": "^4.2.1",
-        "prettier": "2.8.3"
-    },
-    "peerDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.53.0",
-        "@typescript-eslint/parser": "^5.53.0",
-        "eslint": ">= 8",
-        "eslint-plugin-import": "^2.25.2"
-    },
-    "devDependencies": {
-        "esbuild": "^0.17.5"
-    },
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org"
-    }
+    "private": true,
+    "workspaces": ["lib", "example"]
 }
-
