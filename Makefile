@@ -5,3 +5,6 @@ build:
 test:
 	cd example && make test
 
+publish:
+	cd lib && make publish
+
