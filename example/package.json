@@ -2,7 +2,7 @@
     "name": "@stutzlab/eslint-config-test",
     "version": "0.0.1",
     "devDependencies": {
-        "@stutzlab/eslint-config": "*",
+        "@stutzlab/eslint-config": "file:../lib/dist2/stutzlab-eslint-config-0.0.1.tgz",
         "@tsconfig/node14": "^1.0.3",
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
