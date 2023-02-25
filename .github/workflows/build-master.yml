@@ -13,5 +13,8 @@ jobs:
         with:
           node-version: '16.x'
           cache: yarn
+          cache-dependency-path: |
+            lib/yarn.lock
+            example/yarn.lock
       - run: make build
       - run: make test
