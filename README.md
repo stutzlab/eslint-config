@@ -27,19 +27,19 @@ module.exports = {
 
 ```json
 {
-  "@typescript-eslint/eslint-plugin": "^5.53.0",
-  "@typescript-eslint/parser": "^5.53.0",
-  "eslint": ">= 8",
+  "@typescript-eslint/eslint-plugin": "^7.15.0",
+  "@typescript-eslint/parser": "^7.15.0",
+  "eslint": "^8.56.0",
   "eslint-config-airbnb-base": "^15.0.0",
-  "eslint-config-airbnb-typescript": "^17.0.0",
-  "eslint-config-prettier": "^8.6.0",
-  "eslint-import-resolver-typescript": "^3.5.3",
+  "eslint-config-airbnb-typescript": "^18.0.0",
+  "eslint-config-prettier": "^9.1.0",
+  "eslint-import-resolver-typescript": "^3.6.1",
   "eslint-plugin-fp": "^2.3.0",
-  "eslint-plugin-import": "^2.27.5",
-  "eslint-plugin-jest": "^27.2.1",
-  "eslint-plugin-prettier": "^4.2.1",
-  "eslint-plugin-promise": "^6.1.1",
-  "prettier": "^2.8.4"
+  "eslint-plugin-import": "^2.29.1",
+  "eslint-plugin-jest": "^28.6.0",
+  "eslint-plugin-prettier": "^5.1.3",
+  "eslint-plugin-promise": "^6.4.0",
+  "prettier": "^3.3.2",
 }
 ```
 
