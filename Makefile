@@ -18,3 +18,9 @@ clean:
 all:
 	make clean build test
 
+prepare:
+	brew install nvm
+	@echo "NVM installed. Now following shell config instructions at https://formulae.brew.sh/formula/nvm"
+	@echo "After that, open a shell and run:"
+	@echo "nvm use"
+	@echo "corepack enable"	
