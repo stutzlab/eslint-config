@@ -13,15 +13,15 @@ clean:
 	@echo "Cleaning up cache and dist folders..."
 	rm -rf lib/node_modules lib/dist lib/dist2
 	rm -rf example/node_modules example/dist
-	-find $$(yarn cache dir) -name '*stutzlab*' | xargs rm -r
+	-rm -rf ~/.pnpm-store
 
 all:
 	make clean build test
 
 fix-registry:
-	@echo "Replacing artifactory URLs with official yarn registry..."
-	find . -name yarn.lock -exec sed -i '' 's|https://artifactory\.insim\.biz/artifactory/api/npm/nn-npm|https://registry.yarnpkg.com|g' {} +
-	@echo "Done! All yarn.lock files have been updated."
+	@echo "Replacing artifactory URLs with official pnpm registry..."
+	find . -name pnpm-lock.yaml -exec sed -i '' 's|https://artifactory\.insim\.biz/artifactory/api/npm/nn-npm|https://registry.npmjs.org|g' {} +
+	@echo "Done! All pnpm-lock.yaml files have been updated."
 
 prepare:
 	brew install nvm

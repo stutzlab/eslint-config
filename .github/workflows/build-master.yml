@@ -12,9 +12,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          cache: yarn
+          cache: pnpm
           cache-dependency-path: |
-            lib/yarn.lock
-            example/yarn.lock
+            lib/pnpm-lock.yaml
+            example/pnpm-lock.yaml
       - run: make build
       - run: make test

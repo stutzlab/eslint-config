@@ -1,14 +1,12 @@
 build:
 	@echo "Building lib..."
 	rm -rf lib/node_modules lib/dist lib/dist2
-	yarn install --frozen-lockfile
-	yarn esbuild src/index.js --platform=node --outfile=dist/index.js
+	pnpm install --frozen-lockfile
+	pnpm esbuild src/index.js --platform=node --outfile=dist/index.js
 	mkdir -p dist2
 	npm pack --pack-destination dist2
 
 publish:
-	git config --global user.email "flaviostutz@gmail.com"
-	git config --global user.name "Flávio Stutz"
-	npm version from-git --no-git-tag-version
-	echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-	yarn publish
+	# check if tag is current and bump version in package.json to latest tag
+	npx -y monotag@1.26.0 current --bump-action=latest
+	pnpm publish --no-git-checks

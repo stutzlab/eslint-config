@@ -1,23 +1,23 @@
 test:
 	@echo "Installing lib..."
 	
-	# will fail, but will update yarn.lock file with newer lib checksum
-	-yarn install --update-checksums
+	# will fail, but will update pnpm-lock.yaml file with newer lib checksum
+	-pnpm install
 
 	# now it will work
-	yarn install --update-checksums
+	pnpm install
 
 	cp src/index.test src/index-test.ts
 
 	@echo "Linting... (should have errors)"
-	yarn eslint . --ext .ts | grep "A space is required"
+	pnpm eslint . --ext .ts | grep "A space is required"
 
 	@echo "Fixing..."
-	yarn eslint . --ext .ts --fix
+	pnpm eslint . --ext .ts --fix
 
 	@echo "Linting... (should not have errors)"
-	yarn eslint . --ext .ts
+	pnpm eslint . --ext .ts
 
 	@echo "Building package with esbuild..."
-	yarn esbuild src/index-test.ts --bundle --platform=node --outfile=dist/index-test.js
+	pnpm esbuild src/index-test.ts --bundle --platform=node --outfile=dist/index-test.js
 
