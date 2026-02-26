@@ -7,7 +7,7 @@ test:
 	cd example && make test
 
 lint:
-	echo "Nothing to link"
+	echo "Nothing to lint"
 
 publish:
 	cd lib && make publish
