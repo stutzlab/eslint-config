@@ -2,10 +2,10 @@ test:
 	@echo "Installing lib..."
 	
 	# will fail, but will update pnpm-lock.yaml file with newer lib checksum
-	-pnpm install
+	-pnpm install --no-frozen-lockfile
 
 	# now it will work
-	pnpm install
+	pnpm install --no-frozen-lockfile
 
 	cp src/index.test src/index-test.ts
 

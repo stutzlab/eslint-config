@@ -26,6 +26,10 @@
     "devDependencies": {
         "esbuild": "^0.23.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stutzlab/eslint-config"
+    },
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org"
