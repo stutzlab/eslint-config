@@ -4,7 +4,7 @@ build:
 	pnpm install --frozen-lockfile
 	pnpm esbuild src/index.js --platform=node --outfile=dist/index.js
 	mkdir -p dist2
-	npm pack --pack-destination dist2
+	pnpm pack --pack-destination dist2
 
 publish:
 	# check if tag is current and bump version in package.json to latest tag
