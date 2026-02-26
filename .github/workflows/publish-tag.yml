@@ -10,18 +10,27 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    name: Check package
+    uses: flaviostutz/gh-makefile/.github/workflows/make-ci.yml@main
+    with:
+      working-directory: ./
+      tooling: node
+      tooling-version: 20
+      target-build: true
+      target-lint: true
+      target-test: true
 
   publish:
+    name: Publish to npmjs.org
     runs-on: ubuntu-latest
+    needs: build
+    environment: npmjs-registry
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          cache: pnpm
-          cache-dependency-path: |
-            lib/pnpm-lock.yaml
-            example/pnpm-lock.yaml
+          registry-url: 'https://registry.npmjs.org'
       - run: make build
-      - run: make test
       - run: make publish
