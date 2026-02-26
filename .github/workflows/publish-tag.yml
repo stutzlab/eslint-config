@@ -34,5 +34,6 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
           scope: '@stutzlab'
+      - run: echo "@stutzlab:registry=https://registry.npmjs.org" >> ~/.npmrc
       - run: make build
       - run: make publish
