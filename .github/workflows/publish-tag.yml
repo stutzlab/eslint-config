@@ -34,5 +34,4 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
       - run: make build
-      - run: npx -y monotag@1.26.0 current --bump-action=latest --prefix=
-      - run: npm publish --no-git-checks --provenance
+      - run: make publish

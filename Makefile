@@ -9,6 +9,9 @@ test:
 lint:
 	echo "Nothing to lint"
 
+publish:
+	cd lib && make publish
+
 clean:
 	@echo "Cleaning up cache and dist folders..."
 	rm -rf lib/node_modules lib/dist lib/dist2
