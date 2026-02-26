@@ -18,6 +18,11 @@ clean:
 all:
 	make clean build test
 
+fix-registry:
+	@echo "Replacing artifactory URLs with official yarn registry..."
+	find . -name yarn.lock -exec sed -i '' 's|https://artifactory\.insim\.biz/artifactory/api/npm/nn-npm|https://registry.yarnpkg.com|g' {} +
+	@echo "Done! All yarn.lock files have been updated."
+
 prepare:
 	brew install nvm
 	@echo "NVM installed. Now following shell config instructions at https://formulae.brew.sh/formula/nvm"
