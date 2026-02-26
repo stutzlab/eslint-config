@@ -30,8 +30,8 @@ jobs:
           version: 10
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      - run: npm config set registry https://registry.npmjs.org/
-      - run: npm config set @stutzlab:registry https://registry.npmjs.org/
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@stutzlab'
       - run: make build
       - run: make publish
