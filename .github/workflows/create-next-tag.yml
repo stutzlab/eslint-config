@@ -19,5 +19,5 @@ jobs:
       - name: Create tag and push to repo
         run: |
           git config --global user.email "flaviostutz@gmail.com"
-          git config --global user.name "Flávio Stutz"
+          git config --global user.name "Flavio Stutz"
           npx -y monotag@latest tag-push

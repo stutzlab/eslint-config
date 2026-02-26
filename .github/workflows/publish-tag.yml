@@ -5,6 +5,10 @@ on:
     tags:
       - '*'
 
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
+
 jobs:
 
   publish:
@@ -21,5 +25,3 @@ jobs:
       - run: make build
       - run: make test
       - run: make publish
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
