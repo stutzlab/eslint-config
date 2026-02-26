@@ -8,5 +8,5 @@ module.exports = {
         sourcemap: true, // correct line numbers in code coverage
       },
     ],
-  }
+  },
 };

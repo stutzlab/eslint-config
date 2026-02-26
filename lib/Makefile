@@ -2,7 +2,7 @@ build:
 	@echo "Building lib..."
 	rm -rf lib/node_modules lib/dist lib/dist2
 	yarn install --frozen-lockfile
-	yarn esbuild src/index.js --bundle --platform=node --outfile=dist/index.js
+	yarn esbuild src/index.js --platform=node --outfile=dist/index.js
 	mkdir -p dist2
 	npm pack --pack-destination dist2
 
