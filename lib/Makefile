@@ -2,7 +2,8 @@ build:
 	@echo "Building lib..."
 	rm -rf lib/node_modules lib/dist lib/dist2
 	pnpm install --frozen-lockfile
-	pnpm esbuild src/index.js --platform=node --outfile=dist/index.js
+	pnpm esbuild src/index.js --platform=node --format=esm --outfile=dist/index.js
+	pnpm esbuild src/index.js --platform=node --format=cjs --outfile=dist/index.cjs
 	mkdir -p dist2
 	pnpm pack --pack-destination dist2
 
