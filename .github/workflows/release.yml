@@ -2,6 +2,11 @@ name: release
 
 on:
   workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'Create as pre-release'
+        type: boolean
+        default: true
 
 jobs:
   create-tag:
@@ -20,4 +25,4 @@ jobs:
         run: |
           git config --global user.email "flaviostutz@gmail.com"
           git config --global user.name "Flavio Stutz"
-          npx -y monotag@latest tag-push
+          npx -y monotag@latest tag-push ${{ inputs.prerelease == true && '--pre-release' || '' }}
