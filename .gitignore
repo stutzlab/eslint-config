@@ -1,5 +1,7 @@
-node_modules
-dist
-dist2
+node_modules/
+dist/
+dist2/
+.cache/
+*.tgz
 .DS_Store
 *.log

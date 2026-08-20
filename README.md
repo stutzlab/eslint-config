@@ -4,6 +4,30 @@ ESLint rules in 'Golang style' used by most of our projects.
 
 As of version 4.x, this project uses ESLint 9 with the flat config format.
 
+## Machine Setup
+
+```bash
+# Install mise (https://mise.jdx.dev/)
+curl https://mise.run | sh
+
+# Install all pinned tools and dependencies
+make setup
+```
+
+## Quickstart
+
+```bash
+make build
+make test
+```
+
+## Repository Map
+
+```
+lib/        - the published @stutzlab/eslint-config npm package
+example/    - runnable consumer example and integration test
+```
+
 ## Usage
 
 - Run `pnpm add -D @stutzlab/eslint-config`

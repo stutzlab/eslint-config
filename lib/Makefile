@@ -1,16 +1,40 @@
-lint:
-	pnpm audit
+SHELL := /bin/bash
+MISE := mise exec --
 
-build:
-	@echo "Building lib..."
-	rm -rf lib/node_modules lib/dist lib/dist2
-	pnpm install --frozen-lockfile
-	pnpm esbuild src/index.js --platform=node --format=esm --outfile=dist/index.js
-	pnpm esbuild src/index.js --platform=node --format=cjs --outfile=dist/index.cjs
+%:
+	@echo "Unknown target: $@. Ignoring"
+
+install:
+	@echo '>>> lib: install'
+	mise install
+	$(MISE) pnpm install --frozen-lockfile
+
+build: install
+	@echo '>>> lib: build'
+	rm -rf dist dist2
+	$(MISE) pnpm exec esbuild src/index.js --platform=node --format=esm --outfile=dist/index.js
+	$(MISE) pnpm exec esbuild src/index.js --platform=node --format=cjs --outfile=dist/index.cjs
 	mkdir -p dist2
-	pnpm pack --pack-destination dist2
+	$(MISE) pnpm pack --pack-destination dist2
+
+lint:
+	@echo '>>> lib: lint'
+	$(MISE) pnpm audit
+
+lint-fix:
+	@echo '>>> lib: lint-fix'
+	$(MISE) pnpm audit
+
+test:
+	@echo '>>> lib: test (no unit tests in lib module)'
+
+clean:
+	@echo '>>> lib: clean'
+	rm -rf node_modules dist dist2 .cache
+
+all: build lint test
 
 publish:
-	# check if tag is current and bump version in package.json to latest tag
-	npx -y monotag@1.26.0 current --bump-action=latest --prefix=
-	npm publish --no-git-checks --provenance
+	@echo '>>> lib: publish'
+	$(MISE) npx -y monotag@1.26.0 current --bump-action=latest --prefix=
+	$(MISE) npm publish --no-git-checks --provenance

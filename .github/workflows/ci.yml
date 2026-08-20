@@ -2,16 +2,16 @@ name: ci
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  build:
-    name: Build master
-    uses: flaviostutz/gh-makefile/.github/workflows/make-ci.yml@main
-    with:
-      working-directory: ./
-      tooling: node
-      tooling-version: 20
-      target-build: true
-      target-lint: false
-      target-test: true
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v3
+      - run: make build
+      - run: make lint
+      - run: make test
