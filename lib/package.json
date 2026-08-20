@@ -42,7 +42,6 @@
     "packageManager": "pnpm@10.0.0",
     "pnpm": {
         "overrides": {
-            "//": "deepmerge-ts <8.0.0 has a high severity stack exhaustion vulnerability (GHSA-ggr8-5vv4-36mx); force patched version until eslint-plugin-functional upgrades its dependency",
             "deepmerge-ts": ">=8.0.0"
         }
     }
