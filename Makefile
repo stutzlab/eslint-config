@@ -7,7 +7,8 @@ test:
 	cd example && make test
 
 lint:
-	echo "Nothing to lint"
+	cd lib && make lint
+	cd example && make lint
 
 publish:
 	cd lib && make publish
@@ -19,7 +20,7 @@ clean:
 	-rm -rf ~/.pnpm-store
 
 all:
-	make clean build test
+	make clean build lint test
 
 fix-registry:
 	@echo "Replacing artifactory URLs with official pnpm registry..."

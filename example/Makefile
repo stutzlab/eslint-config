@@ -1,3 +1,6 @@
+lint:
+	pnpm audit
+
 test:
 	@echo "Installing lib..."
 	
@@ -10,13 +13,13 @@ test:
 	cp src/index.test src/index-test.ts
 
 	@echo "Linting... (should have errors)"
-	pnpm eslint . --ext .ts | grep "A space is required"
+	pnpm eslint . | grep "A space is required"
 
 	@echo "Fixing..."
-	pnpm eslint . --ext .ts --fix
+	pnpm eslint . --fix
 
 	@echo "Linting... (should not have errors)"
-	pnpm eslint . --ext .ts
+	pnpm eslint .
 
 	@echo "Building package with esbuild..."
 	pnpm esbuild src/index-test.ts --bundle --platform=node --outfile=dist/index-test.js

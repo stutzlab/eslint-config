@@ -1,3 +1,6 @@
+lint:
+	pnpm audit
+
 build:
 	@echo "Building lib..."
 	rm -rf lib/node_modules lib/dist lib/dist2
